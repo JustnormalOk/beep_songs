@@ -11,7 +11,7 @@ These commands that I only use are `os.system`, to actually run the command.
 
 # INSTRUCTIONS
 1. Switch your Linux distro to CLI only by Control + Alt + F4, F5, or F3, I don't know which key, but as long as you see the CLI. Type your username and password as it is stated.
-2. Go to the desired folder (like this folder!; e.g: `cd /home/<yourcomputerusername>/Downloads/beep_songs-mai`).
+2. Go to the desired folder (like this folder!; e.g: `cd /home/<yourcomputerusername>/Downloads/beep_songs-main`).
 3. After that pick one of the songs you'd like. (YOU WILL NEED PYTHON FOR THIS!!!), by typing `python3 badapple.py` or `python3 wantyougone.py`
 
 # FEATURES
