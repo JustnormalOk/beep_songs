@@ -4,6 +4,7 @@ Beep songs that come from the PC speaker
 # NOTICE
 1. These commands that I only use are `os.system`, to actually run the command.
 2. Since new computers these days might not include the buzzer, you might actually need a 4-pin speaker header for this case to play the sound.
+3. The beep function I provided may need sudo for this.
 
 # REQUIREMENTS
 1. You need to install 'beep' module for your Linux distribution for this to work, because these kinds of code only uses "beep" to make that buzzer sound from your PC or laptop.
