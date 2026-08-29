@@ -364,19 +364,17 @@ wait(0.4)
 
 print("done!")
 
-# def outro():
-#     os.system("beep -f 165 -l 200")
-#     os.system("beep -f 330 -l 200")
-#     wait(0.2)
-#     os.system("beep -f 330 -l 200")
+def outro():
+    os.system("beep -f 165 -l 200")
+    os.system("beep -f 330 -l 200")
+    wait(0.2)
+    os.system("beep -f 330 -l 200")
     
-#     wait(0.2)
-#     os.system("beep -f 330 -l 200")
-#     os.system("beep -f 330 -l 200")
-#     wait(0.2)
-#     os.system("beep -f 330 -l 200")
-#     wait(0.1)
-#     os.system("beep -f 330 -l 200")
-#     os.system("beep -f 330 -l 200")
-    
-# maybe these functions are unused at the end of this code too
+    wait(0.2)
+    os.system("beep -f 330 -l 200")
+    os.system("beep -f 330 -l 200")
+    wait(0.2)
+    os.system("beep -f 330 -l 200")
+    wait(0.1)
+    os.system("beep -f 330 -l 200")
+    os.system("beep -f 330 -l 200")
