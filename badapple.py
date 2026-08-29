@@ -1,10 +1,11 @@
-# This song is Bad Apple
+## This song is Bad Apple
 import os
 
 from time import sleep as wait
-def beat_one():
-    os.system("beep -f 78 -l 100")
-    
+##def beat_one():
+##    os.system("beep -f 78 -l 100")
+## The def beat_one() function isn't used in this case, so I commented. 
+
 def zero():
     for i in range(3):
         os.system("beep -f 156 -l 175")
