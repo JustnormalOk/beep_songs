@@ -26,7 +26,7 @@ Beep songs that come from the PC speaker
 1. `sudo nano /etc/udev/rules.d/70-pcspkr-beep.rules` - create a rule file for it
 2. Just paste this exact line, `ACTION!="remove", SUBSYSTEM=="input", ATTRS{name}=="PC Speaker", ENV{DEVNAME}!="", TAG+="uaccess"`, and then save it, by pressing Ctrl + O, press Enter, and Ctrl + X to exit.
 3. Reload the udev rules and restart module `sudo udevadm control --reload && sudo rmmod pcspkr && sudo modprobe pcspkr` 
-
+4. For testing if it works, just test by typing in the terminal `beep`
 ## Installation
 
 1. Open the terminal, then go to the desired folder (like this folder!; e.g: `cd /home/<yourcomputerusername>/Downloads/beep_songs-main`).
