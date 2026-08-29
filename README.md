@@ -2,14 +2,28 @@
 Beep songs that come from the PC speaker
 
 # NOTICE
-
-These commands that I only use are `os.system`, to actually run the command.
+1. These commands that I only use are `os.system`, to actually run the command.
+2. Since new computers these days might not include the buzzer, you might actually need a 4-pin speaker header for this case to play the sound.
 
 # REQUIREMENTS
-1. You need to install 'beep' module for your Linux distribution for this to work, because these kinds of code only uses "beep" to make that buzzer sound from your PC or laptop. But since I'm kind of that lazy person (of course), maybe google it, I'm so sorry for not helping how to setup kind it for the PC speaker beep sound thingy. But I'll probably do it later if I could, thanks
+1. You need to install 'beep' module for your Linux distribution for this to work, because these kinds of code only uses "beep" to make that buzzer sound from your PC or laptop.
 2. Python module
+3. Your computer must have a buzzer supported
+4. A PC speaker (inside the motherboard)
 
-# INSTRUCTIONS
+# INSTRUCTIONS 
+*Note that this part is only for Arch!!*
+##Install beep module for your Linux distro
+1. `sudo modprobe pcspkr` - this loads it temporarily 
+2. `echo "pcspkr" | sudo tee /etc/modules-load.d/pcspkr.conf` - this loads it on boot
+3. `sudo pacman -S beep` - installs beep
+
+*This part sets up the instructions for beep to play it on the onboard speaker instead*
+1. `sudo nano /etc/udev/rules.d/70-pcspkr-beep.rules` - create a rule file for it
+2. Just paste this exact line, `ACTION!="remove", SUBSYSTEM=="input", ATTRS{name}=="PC Speaker", ENV{DEVNAME}!="", TAG+="uaccess"`, and then save it, by pressing Ctrl + O, press Enter, and Ctrl + X to exit.
+3. Reload the udev rules and restart module `sudo udevadm control --reload && sudo rmmod pcspkr && sudo modprobe pcspkr` 
+
+##Installation
 1. Switch your Linux distro to CLI only by Control + Alt + F4, F5, or F3, I don't know which key, but as long as you see the CLI. Type your username and password as it is stated.
 2. Go to the desired folder (like this folder!; e.g: `cd /home/<yourcomputerusername>/Downloads/beep_songs-main`).
 3. After that pick one of the songs you'd like. (YOU WILL NEED PYTHON FOR THIS!!!), by typing `python3 badapple.py` or `python3 wantyougone.py`
